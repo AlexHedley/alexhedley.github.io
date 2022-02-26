@@ -4,19 +4,22 @@
 <head>
 	<title>Alex Hedley | Developer</title>
 	<link rel="shortcut icon" href="favicon.ico" />
-	<link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
-	<link href="css/alexhedley.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+	<link rel="stylesheet" type="text/css" href="css/alexhedley.css" />
+	<link rel="stylesheet" type="text/css" href="css/apps.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
-	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png" />
+	<link rel="apple-touch-icon" href="images/apple/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="images/apple/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="images/apple/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="images/apple/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="images/apple/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="images/apple/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple/apple-touch-icon-180x180.png" />
 
 	<meta content="http://jquery.com/" />
 </head>
@@ -31,11 +34,9 @@
 			<div id="menu">
 				<ul>
 					<li class="myapps"><a href="#myapps">My Apps</a></li>
+					<li class="otherstuff"><a href="#otherstuff">Other Stuff</a></li>
 					<li class="mybio"><a href="#mybio">My Bio</a></li>
 					<li class="myblog"><a href="#myblog">My Blog</a></li>
-					<li class="otherstuff"><a href="#otherstuff">Other Stuff</a></li>
-					<li class="599cd"><a href="#599cd">599CD</a></li>
-					<li class="contactme"><a href="#contactme">Contact</a></li>
 				</ul>
 			</div>
 
@@ -47,7 +48,6 @@
 	<div id="header-home">
 		<div class="content">
 
-			
 			<ul class="social">
 				<li><a href="https://www.linkedin.com/in/alexhedley/" target="_blank"><img src="images/social-linkedin.png" alt="LinkedIn" /></a></li>
 				<li><a href="https://github.com/alexhedley" target="_blank"><img src="images/social-github.png" alt="GitHub" /></a></li>
@@ -68,6 +68,8 @@
 		<div class="arrow">
 			<div class="content">
 				<ul class="apps">
+					<li><a href="#myapps"><img src="images/icon-myapps.png" alt="My Apps" />My Apps</a></li>
+					<li><a href="#otherstuff"><img src="images/icon-otherstuff.png" alt="Other Stuff" />Other Stuff</a></li>
 					<li><a href="#mybio"><img src="images/icon-mybio.png" alt="My Bio" />My Bio</a></li>
 					<li><a href="#myblog"><img src="images/icon-myblog.png" alt="My Blog" />My Blog</a></li>
 				</ul>
@@ -76,43 +78,226 @@
 	</div>
 	<!-- Home -->
 
+	<!-- My Apps -->
+	<div id="myapps">
+
+		<div id="rowStyle1">
+			<div class="content">
+
+				<div class="col5">
+					<img src="images/icon-myapps.png" alt="My Apps"/>
+				</div>
+				
+				<div class="col4">
+					<h1>My Apps</h1>
+				</div>
+				
+			</div>
+		</div>
+
+		<div id="rowStyle3">
+			<div class="arrow">
+				<div class="content">
+
+					<div class="col1-fluid">	
+						<ul class="apps">
+							<li>
+								<a href="/Utility" target="_blank">
+									<img src="images/apps-other.png" alt="Utility" />
+									Utility
+								</a>
+							</li>
+						</ul>
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- My Apps -->
+
+	<!-- Other Stuff -->
+	<div id="otherstuff">
+
+		<div id="rowStyle1">
+			<div class="content">
+
+				<div class="col5">
+					<img src="images/icon-otherstuff.png" alt="Other Stuff"/>
+				</div>
+				
+				<div class="col4">
+					<h1>Other Stuff</h1>
+				</div>
+				
+			</div>
+		</div>
+
+		<div id="rowStyle6">
+			<div class="arrow">
+				<div class="content">
+
+					<table class="table-apps">
+						<tbody>
+							<tr>
+								<td>
+									<a href="/nintendoswitch">
+										<i class="fab fa-nintendo-switch"></i>
+										Nintendo Switch
+									</a>
+								</td>
+								<td>
+									<a href="/Gigs">
+										<i class="fas fa-music"></i>
+										Gigs
+									</a>
+								</td>
+								<td>
+									<a href="/adventofcode">
+										<i class="fas fa-code"></i>
+										Advent Of Code
+									</a>
+								</td>
+								<td>
+									<a href="/escaperooms">
+										<i class="fas fa-lock"></i>
+										Escape Rooms
+									</a>
+								</td>
+								<td>
+									<a href="/funkopop">
+										Funko Pop
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/playingcards">
+										<i class="fas fa-club"></i>
+										Playing Cards
+									</a>
+								</td>
+								<td>
+									<a href="/crafting">
+										Crafting
+									</a>
+								</td>
+								<td>
+									<a href="/FilmsBlog">
+										<i class="fas fa-camera-movie"></i>
+										Films Blogs
+									</a>
+								</td>
+								<td>
+									<a href="/letsgetquizy">
+										Let's Get Quizzy
+									</a>
+								</td>
+								<td>
+									<a href="/lego">
+										Lego
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/coins">
+										<i class="fas fa-coin"></i>
+										Coins
+									</a>
+								</td>
+								<td>
+									<a href="/experiences">
+										Experiences
+									</a>
+								</td>
+								<td>
+									<a href="/games">
+										<i class="fas fa-game-board"></i>
+										Games
+									</a>
+								</td>
+								<td>
+									<a href="/origami">
+										Origami
+									</a>
+								</td>
+								<td>
+									<a href="/kumiko">
+										Kumiko
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Other Stuff -->
+
 	<!-- My Bio -->
 	<div id="mybio">
 
 		<div id="rowStyle1">
-		<div class="content">
+			<div class="content">
 
-			<div class="col5">
-				<img src="images/icon-mybio.png" alt="My Bio"/>
+				<div class="col5">
+					<img src="images/icon-mybio.png" alt="My Bio"/>
+				</div>
+				
+				<div class="col4">
+					<h1>My Bio</h1>
+				</div>
+				
 			</div>
-			
-			<div class="col4">
-				<h1>My Bio</h1>
-			</div>
-			
-		</div></div>
+		</div>
 
 		<div id="rowStyle4">
-		<div class="arrow">
-		<div class="content">
-			
-			<div class="col2">
-				<p>I'm Alex Hedley, a computer programmer from the UK.</p>
-			</div>
+			<div class="arrow">
+				<div class="content">
+					
+					<div class="col2">
+						<p>I'm Alex Hedley, a computer programmer from the UK.</p>
+					</div>
 
-			<div class="col3">
-				<img src="images/mybio.png" alt="Alex Hedley" />
+					<div class="col3">
+						<img src="images/mybio.png" alt="Alex Hedley" />
+						
+						<ul class="social">
+							<li>
+								<a href="http://facebook.com/Alex.Hedley" target="_blank">
+									<img src="images/social-facebook-bio.png" alt="Facebook" />
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/alexhedley" target="_blank">
+									<img src="images/social-twitter-bio.png" alt="Twitter" />
+								</a>
+							</li>
+							<li>
+								<a href="http://instagram.com/lex" target="_blank">
+									<img src="images/social-instagram-bio.png" alt="Instagram" />
+								</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/alexhedley/" target="_blank">
+									<img src="images/social-linkedin-bio.png" alt="LinkedIn" />
+								</a>
+							</li>
+							<li>
+								<a href="http://teamtreehouse.com/alexthedley" target="_blank">
+									<img src="images/social-treehouse-bio.png" alt="Treehouse" />
+								</a>
+							</li>
+						</ul>
+					</div>
 				
-				<ul class="social">
-					<li><a href="http://facebook.com/Alex.Hedley" target="_blank"><img src="images/social-facebook-bio.png" alt="Facebook" /></a></li>
-					<li><a href="https://twitter.com/alexhedley" target="_blank"><img src="images/social-twitter-bio.png" alt="Twitter" /></a></li>
-					<li><a href="http://instagram.com/lex" target="_blank"><img src="images/social-instagram-bio.png" alt="Instagram" /></a></li>
-					<li><a href="https://www.linkedin.com/in/alexhedley/" target="_blank"><img src="images/social-linkedin-bio.png" alt="LinkedIn" /></a></li>
-					<li><a href="http://teamtreehouse.com/alexthedley" target="_blank"><img src="images/social-treehouse-bio.png" alt="Treehouse" /></a></li>
-				</ul>
+				</div>
 			</div>
-		
-	</div></div></div></div>
+		</div>
+	</div>
 	<!-- My Bio -->
 
 	<!-- My Blog -->
