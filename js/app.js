@@ -14,17 +14,10 @@ $.ajax({
         $xml = $( xmlDoc );
         
         $xml.find( "item" ).each(function(index, elem) {
-            // var item = $.parseXML( elem.outerHTML );
-
             var title = $(elem).find( "title" ).text();
             var description = $(elem).find( "description" ).text();
             var link = $(elem).find( "link" ).text();
             var pubDate = $(elem).find( "pubDate" ).text();
-
-            console.log(title);
-            console.log(description);
-            console.log(link);
-            console.log(pubDate);
 
             var divElement = document.createElement("div");
             divElement.setAttribute("class", "col1-fluid");
@@ -63,7 +56,6 @@ $.ajax({
 
             divElement.appendChild(p);
 
-            // item.appendChild(divElement);
             item.append(divElement);
         });
     },
