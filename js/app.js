@@ -42,7 +42,7 @@ $.ajax({
             var p = document.createElement("p");
             p.appendChild(img);
 
-            var content = document.createTextNode(description);
+            var content = document.createTextNode(description + " ");
             p.appendChild(content);
 
             var a = document.createElement("a");
