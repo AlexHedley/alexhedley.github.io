@@ -173,6 +173,71 @@ input[type="submit"]:focus {
     width: 100%;
 }
 
+#youtube {
+    background: #e0e0e0;
+    padding: 3em 1em;
+}
+
+#youtube .youtube-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#youtube h1 {
+    margin: 0 0 0.5em;
+    color: #2f3234;
+}
+
+#youtube p {
+    color: #2f3234;
+}
+
+#youtube a {
+    color: #c4302b;
+}
+
+#youtube-videos {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+#youtube-videos[hidden],
+#youtube-controls[hidden] {
+    display: none;
+}
+
+#youtube-videos iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+#youtube-videos h2 {
+    margin: 0.75em 0;
+    color: #2f3234;
+    font-size: 1.6em;
+}
+
+.youtube-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.youtube-controls button {
+    width: 2.5em;
+    height: 2.5em;
+    border: 0;
+    border-radius: 50%;
+    background: #c4302b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.6em;
+}
+
 ul.apps li {
     display: inline-block;
     *display: inline;
