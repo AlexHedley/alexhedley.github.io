@@ -1,6 +1,5 @@
 (function () {
     const feedUrl = "https://www.youtube.com/feeds/videos.xml?channel_id=UC8-LMGGm9CYwBNhY-81xXqA";
-    const feedApiUrl = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(feedUrl);
     const maxVideos = 5;
 
     document.addEventListener("DOMContentLoaded", loadVideos);
@@ -11,16 +10,25 @@
         const controls = document.getElementById("youtube-controls");
 
         try {
-            const response = await fetch(feedApiUrl);
+            const response = await fetch(feedUrl);
             if (!response.ok) {
                 throw new Error("Unable to load YouTube feed");
             }
 
-            const feed = await response.json();
-            const videos = (feed.items || [])
-                .map(function (item) {
-                    const id = getVideoId(item.link);
-                    return id ? { id: id, title: item.title || "YouTube video" } : null;
+            const xml = new DOMParser().parseFromString(await response.text(), "application/xml");
+            if (xml.getElementsByTagName("parsererror").length > 0) {
+                throw new Error("Unable to parse YouTube feed");
+            }
+
+            const entries = Array.from(xml.getElementsByTagNameNS("*", "entry"));
+            const videos = entries
+                .map(function (entry) {
+                    const idElement = entry.getElementsByTagNameNS("*", "videoId")[0];
+                    const titleElement = entry.getElementsByTagNameNS("*", "title")[0];
+                    const id = idElement && idElement.textContent.trim();
+                    return id && /^[\w-]{11}$/.test(id)
+                        ? { id: id, title: titleElement ? titleElement.textContent.trim() : "YouTube video" }
+                        : null;
                 })
                 .filter(Boolean)
                 .slice(0, maxVideos);
@@ -58,20 +66,6 @@
             controls.hidden = videos.length < 2;
         } catch (error) {
             status.textContent = "Unable to load videos right now. Visit the YouTube channel above.";
-        }
-    }
-
-    function getVideoId(link) {
-        try {
-            const url = new URL(link);
-            if (!["youtube.com", "www.youtube.com", "m.youtube.com", "youtu.be"].includes(url.hostname)) {
-                return null;
-            }
-
-            const id = url.hostname === "youtu.be" ? url.pathname.slice(1) : url.searchParams.get("v");
-            return id && /^[\w-]{11}$/.test(id) ? id : null;
-        } catch (error) {
-            return null;
         }
     }
 
