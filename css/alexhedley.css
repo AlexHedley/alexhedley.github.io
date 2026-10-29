@@ -687,4 +687,60 @@ ul.apps li a:focus {
     #footer .content {
         background-image: none;
     }
+
+    #myblog #rowStyle1 .content {
+        padding: 3em 0 2em;
+    }
+
+    #myblog #rowStyle1 .col5 {
+        display: block;
+        width: 5em;
+        margin: 0 auto 1em;
+    }
+
+    #myblog #rowStyle1 .col4 {
+        display: block;
+        width: auto;
+        margin: 0 1em;
+        text-align: center;
+    }
+
+    #myblog #rowStyle1 .col4 h1 {
+        margin: 0;
+        font-size: 3em;
+    }
+
+    #myblog #rowStyle5 .content {
+        padding: 2em 0;
+    }
+
+    #myblog #rowStyle5 .col2 {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        padding: 0 1.5em;
+    }
+
+    #myblog .col1-fluid {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 42em;
+        margin: 0 auto 2em;
+        padding: 0 1em;
+        overflow-wrap: break-word;
+    }
+
+    #myblog .blog-description img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    #myblog .blog-description::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
 }
