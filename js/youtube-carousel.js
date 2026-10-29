@@ -1,5 +1,7 @@
 (function () {
     const feedUrl = "https://www.youtube.com/feeds/videos.xml?channel_id=UC8-LMGGm9CYwBNhY-81xXqA";
+    // YouTube feeds send no CORS headers, so use a CORS-enabled feed-to-JSON service
+    const proxyUrl = "https://api.rss2json.com/v1/api.json?rss_url=";
     const maxVideos = 5;
 
     document.addEventListener("DOMContentLoaded", loadVideos);
@@ -10,24 +12,21 @@
         const controls = document.getElementById("youtube-controls");
 
         try {
-            const response = await fetch(feedUrl);
+            const response = await fetch(proxyUrl + encodeURIComponent(feedUrl));
             if (!response.ok) {
                 throw new Error("Unable to load YouTube feed");
             }
 
-            const xml = new DOMParser().parseFromString(await response.text(), "application/xml");
-            if (xml.getElementsByTagName("parsererror").length > 0) {
+            const data = await response.json();
+            if (data.status !== "ok" || !Array.isArray(data.items)) {
                 throw new Error("Unable to parse YouTube feed");
             }
 
-            const entries = Array.from(xml.getElementsByTagNameNS("*", "entry"));
-            const videos = entries
-                .map(function (entry) {
-                    const idElement = entry.getElementsByTagNameNS("*", "videoId")[0];
-                    const titleElement = entry.getElementsByTagNameNS("*", "title")[0];
-                    const id = idElement && idElement.textContent.trim();
-                    return id && /^[\w-]{11}$/.test(id)
-                        ? { id: id, title: titleElement ? titleElement.textContent.trim() : "YouTube video" }
+            const videos = data.items
+                .map(function (item) {
+                    const match = /[?&]v=([\w-]{11})/.exec(item.link || "");
+                    return match
+                        ? { id: match[1], title: (item.title || "YouTube video").trim() }
                         : null;
                 })
                 .filter(Boolean)
