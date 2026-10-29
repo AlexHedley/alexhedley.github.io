@@ -1,7 +1,6 @@
 (function () {
-    const feedUrl = "https://www.youtube.com/feeds/videos.xml?channel_id=UC8-LMGGm9CYwBNhY-81xXqA";
-    // YouTube feeds send no CORS headers, so use a CORS-enabled feed-to-JSON service
-    const proxyUrl = "https://api.rss2json.com/v1/api.json?rss_url=";
+    // Generated weekly by .github/workflows/youtube-feed.yml (YouTube's feed isn't CORS-enabled)
+    const dataUrl = "data/youtube.json";
     const maxVideos = 5;
 
     document.addEventListener("DOMContentLoaded", loadVideos);
@@ -12,21 +11,20 @@
         const controls = document.getElementById("youtube-controls");
 
         try {
-            const response = await fetch(proxyUrl + encodeURIComponent(feedUrl));
+            const response = await fetch(dataUrl);
             if (!response.ok) {
                 throw new Error("Unable to load YouTube feed");
             }
 
             const data = await response.json();
-            if (data.status !== "ok" || !Array.isArray(data.items)) {
+            if (!Array.isArray(data.videos)) {
                 throw new Error("Unable to parse YouTube feed");
             }
 
-            const videos = data.items
+            const videos = data.videos
                 .map(function (item) {
-                    const match = /[?&]v=([\w-]{11})/.exec(item.link || "");
-                    return match
-                        ? { id: match[1], title: (item.title || "YouTube video").trim() }
+                    return item && /^[\w-]{11}$/.test(item.id || "")
+                        ? { id: item.id, title: (item.title || "YouTube video").trim() }
                         : null;
                 })
                 .filter(Boolean)
