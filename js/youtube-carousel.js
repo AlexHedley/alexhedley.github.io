@@ -1,5 +1,6 @@
 (function () {
-    const feedUrl = "https://www.youtube.com/feeds/videos.xml?channel_id=UC8-LMGGm9CYwBNhY-81xXqA";
+    // Generated weekly by .github/workflows/youtube-feed.yml (YouTube's feed isn't CORS-enabled)
+    const dataUrl = "data/youtube.json";
     const maxVideos = 5;
 
     document.addEventListener("DOMContentLoaded", loadVideos);
@@ -10,24 +11,20 @@
         const controls = document.getElementById("youtube-controls");
 
         try {
-            const response = await fetch(feedUrl);
+            const response = await fetch(dataUrl);
             if (!response.ok) {
                 throw new Error("Unable to load YouTube feed");
             }
 
-            const xml = new DOMParser().parseFromString(await response.text(), "application/xml");
-            if (xml.getElementsByTagName("parsererror").length > 0) {
+            const data = await response.json();
+            if (!Array.isArray(data.videos)) {
                 throw new Error("Unable to parse YouTube feed");
             }
 
-            const entries = Array.from(xml.getElementsByTagNameNS("*", "entry"));
-            const videos = entries
-                .map(function (entry) {
-                    const idElement = entry.getElementsByTagNameNS("*", "videoId")[0];
-                    const titleElement = entry.getElementsByTagNameNS("*", "title")[0];
-                    const id = idElement && idElement.textContent.trim();
-                    return id && /^[\w-]{11}$/.test(id)
-                        ? { id: id, title: titleElement ? titleElement.textContent.trim() : "YouTube video" }
+            const videos = data.videos
+                .map(function (item) {
+                    return item && /^[\w-]{11}$/.test(item.id || "")
+                        ? { id: item.id, title: (item.title || "YouTube video").trim() }
                         : null;
                 })
                 .filter(Boolean)
