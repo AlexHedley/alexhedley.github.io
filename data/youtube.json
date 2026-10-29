@@ -1,4 +1,110 @@
 {
   "channelId": "UC8-LMGGm9CYwBNhY-81xXqA",
-  "videos": []
+  "videos": [
+    {
+      "id": "hDgD33h5FiM",
+      "title": "Markdown Library",
+      "published": "2026-10-24T11:00:27+00:00",
+      "url": "https://www.youtube.com/watch?v=hDgD33h5FiM",
+      "thumbnail": "https://i1.ytimg.com/vi/hDgD33h5FiM/hqdefault.jpg"
+    },
+    {
+      "id": "6uKn5e1KEf0",
+      "title": "Classic ASP Include Resolver - VSCode Extension",
+      "published": "2026-10-17T11:00:15+00:00",
+      "url": "https://www.youtube.com/watch?v=6uKn5e1KEf0",
+      "thumbnail": "https://i3.ytimg.com/vi/6uKn5e1KEf0/hqdefault.jpg"
+    },
+    {
+      "id": "cDxSblQ35JI",
+      "title": "GitHub Add File",
+      "published": "2026-10-10T11:00:23+00:00",
+      "url": "https://www.youtube.com/watch?v=cDxSblQ35JI",
+      "thumbnail": "https://i4.ytimg.com/vi/cDxSblQ35JI/hqdefault.jpg"
+    },
+    {
+      "id": "iNpblsu_JzM",
+      "title": "Markdown Code",
+      "published": "2026-10-02T23:00:57+00:00",
+      "url": "https://www.youtube.com/watch?v=iNpblsu_JzM",
+      "thumbnail": "https://i2.ytimg.com/vi/iNpblsu_JzM/hqdefault.jpg"
+    },
+    {
+      "id": "EfkpEVo2N3I",
+      "title": "Markdown Code Blocks",
+      "published": "2026-09-26T11:00:04+00:00",
+      "url": "https://www.youtube.com/watch?v=EfkpEVo2N3I",
+      "thumbnail": "https://i2.ytimg.com/vi/EfkpEVo2N3I/hqdefault.jpg"
+    },
+    {
+      "id": "B3ZvVHARiJc",
+      "title": "Markdown Emphasis",
+      "published": "2026-09-19T11:00:22+00:00",
+      "url": "https://www.youtube.com/watch?v=B3ZvVHARiJc",
+      "thumbnail": "https://i3.ytimg.com/vi/B3ZvVHARiJc/hqdefault.jpg"
+    },
+    {
+      "id": "1sKmzpMnSEA",
+      "title": "Markdown Images",
+      "published": "2026-09-12T11:00:28+00:00",
+      "url": "https://www.youtube.com/watch?v=1sKmzpMnSEA",
+      "thumbnail": "https://i2.ytimg.com/vi/1sKmzpMnSEA/hqdefault.jpg"
+    },
+    {
+      "id": "j78kF9NAN8I",
+      "title": "Markdown Links",
+      "published": "2026-09-05T11:00:30+00:00",
+      "url": "https://www.youtube.com/watch?v=j78kF9NAN8I",
+      "thumbnail": "https://i3.ytimg.com/vi/j78kF9NAN8I/hqdefault.jpg"
+    },
+    {
+      "id": "Qm-sqSGMsWM",
+      "title": "Markdown Horizontal Rules",
+      "published": "2026-08-29T11:00:26+00:00",
+      "url": "https://www.youtube.com/watch?v=Qm-sqSGMsWM",
+      "thumbnail": "https://i2.ytimg.com/vi/Qm-sqSGMsWM/hqdefault.jpg"
+    },
+    {
+      "id": "jc-vN7gOsIg",
+      "title": "Markdown Lists",
+      "published": "2026-08-22T11:00:20+00:00",
+      "url": "https://www.youtube.com/watch?v=jc-vN7gOsIg",
+      "thumbnail": "https://i3.ytimg.com/vi/jc-vN7gOsIg/hqdefault.jpg"
+    },
+    {
+      "id": "I1vY8yloX38",
+      "title": "Markdown Blockquotes",
+      "published": "2026-08-15T11:00:38+00:00",
+      "url": "https://www.youtube.com/watch?v=I1vY8yloX38",
+      "thumbnail": "https://i2.ytimg.com/vi/I1vY8yloX38/hqdefault.jpg"
+    },
+    {
+      "id": "DozCRUU1_Z4",
+      "title": "Markdown Headers",
+      "published": "2026-08-08T11:00:02+00:00",
+      "url": "https://www.youtube.com/watch?v=DozCRUU1_Z4",
+      "thumbnail": "https://i1.ytimg.com/vi/DozCRUU1_Z4/hqdefault.jpg"
+    },
+    {
+      "id": "Jb7LXykgcns",
+      "title": "Markdown Paragraphs",
+      "published": "2026-08-01T11:00:15+00:00",
+      "url": "https://www.youtube.com/watch?v=Jb7LXykgcns",
+      "thumbnail": "https://i3.ytimg.com/vi/Jb7LXykgcns/hqdefault.jpg"
+    },
+    {
+      "id": "AjkliqEBi54",
+      "title": "Intro to Markdown",
+      "published": "2026-07-25T11:00:30+00:00",
+      "url": "https://www.youtube.com/watch?v=AjkliqEBi54",
+      "thumbnail": "https://i2.ytimg.com/vi/AjkliqEBi54/hqdefault.jpg"
+    },
+    {
+      "id": "dbpWvp2ncNc",
+      "title": "Markdown Extra Info",
+      "published": "2026-07-25T11:00:12+00:00",
+      "url": "https://www.youtube.com/watch?v=dbpWvp2ncNc",
+      "thumbnail": "https://i1.ytimg.com/vi/dbpWvp2ncNc/hqdefault.jpg"
+    }
+  ]
 }
