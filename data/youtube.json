@@ -2,6 +2,13 @@
   "channelId": "UC8-LMGGm9CYwBNhY-81xXqA",
   "videos": [
     {
+      "id": "rEiDvFyBaJo",
+      "title": "Learn SQL",
+      "published": "2026-11-21T12:00:39+00:00",
+      "url": "https://www.youtube.com/watch?v=rEiDvFyBaJo",
+      "thumbnail": "https://i3.ytimg.com/vi/rEiDvFyBaJo/hqdefault.jpg"
+    },
+    {
       "id": "t-Qu183U4ZU",
       "title": "Microsoft Access - Interactive Learning Tool",
       "published": "2026-11-14T12:00:09+00:00",
@@ -98,13 +105,6 @@
       "published": "2026-08-15T11:00:38+00:00",
       "url": "https://www.youtube.com/watch?v=I1vY8yloX38",
       "thumbnail": "https://i2.ytimg.com/vi/I1vY8yloX38/hqdefault.jpg"
-    },
-    {
-      "id": "DozCRUU1_Z4",
-      "title": "Markdown Headers",
-      "published": "2026-08-08T11:00:02+00:00",
-      "url": "https://www.youtube.com/watch?v=DozCRUU1_Z4",
-      "thumbnail": "https://i1.ytimg.com/vi/DozCRUU1_Z4/hqdefault.jpg"
     }
   ]
 }
