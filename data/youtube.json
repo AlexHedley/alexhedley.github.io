@@ -2,6 +2,13 @@
   "channelId": "UC8-LMGGm9CYwBNhY-81xXqA",
   "videos": [
     {
+      "id": "NVr3cC7KFtA",
+      "title": "Learn VBA",
+      "published": "2026-11-28T12:00:07+00:00",
+      "url": "https://www.youtube.com/watch?v=NVr3cC7KFtA",
+      "thumbnail": "https://i3.ytimg.com/vi/NVr3cC7KFtA/hqdefault.jpg"
+    },
+    {
       "id": "rEiDvFyBaJo",
       "title": "Learn SQL",
       "published": "2026-11-21T12:00:39+00:00",
@@ -98,13 +105,6 @@
       "published": "2026-08-22T11:00:20+00:00",
       "url": "https://www.youtube.com/watch?v=jc-vN7gOsIg",
       "thumbnail": "https://i3.ytimg.com/vi/jc-vN7gOsIg/hqdefault.jpg"
-    },
-    {
-      "id": "I1vY8yloX38",
-      "title": "Markdown Blockquotes",
-      "published": "2026-08-15T11:00:38+00:00",
-      "url": "https://www.youtube.com/watch?v=I1vY8yloX38",
-      "thumbnail": "https://i2.ytimg.com/vi/I1vY8yloX38/hqdefault.jpg"
     }
   ]
 }
